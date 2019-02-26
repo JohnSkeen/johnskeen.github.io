@@ -1,0 +1,81 @@
+/*===========================================
+  Work Styles
+===========================================*/
+
+.grid-container {
+  display: grid;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+
+  @include mq(medium) {
+    margin-top: 0;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(17, 1fr);
+  }
+}
+
+.item-1 {
+  background: $cyan;
+  height: 100vh;
+
+
+  @include flexycolumn;
+  @include mq(medium) {
+    grid-area: 1 / 1 / 9 / 4;
+  }
+}
+
+
+.item-2 {
+  background: $gallery;
+
+  @include flexycolumn;
+  @include mq(medium) {
+    grid-area: 1 / 4 / 6 / 6;
+  }
+}
+
+.item-3 {
+  background: $persianBlue;
+
+  @include flexycolumn;
+  @include mq(medium) {
+    grid-area: 9 / 1 / 18 / 4;
+  }
+}
+
+.dashboard-image {
+  width: 70%;
+}
+
+.tickets-svg {
+  width: 55%;
+}
+
+.item-4 {
+  background-image: url("../assets/directory.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include flexycolumn;
+  @include mq(medium) {
+    grid-area: 6 / 4 / 13 / 6;
+  }
+}
+
+.item-5 {
+  background-image: url("../assets/wheel.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include flexycolumn;
+  @include mq(medium) {
+    grid-area: 13 / 4 / 18 / 6;
+  }
+}

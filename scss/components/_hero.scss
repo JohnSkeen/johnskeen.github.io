@@ -1,0 +1,155 @@
+/*===========================================
+  Hero Styles
+===========================================*/
+.home {
+  @include mq(medium) {
+    margin-top: -18px;
+  }
+}
+
+.hero-page {
+  background: $black;
+  height: 100vh;
+  margin-top: 120px;
+  @include mq(medium) {
+    margin-top: 0;
+    position: relative;
+  }
+}
+
+.hello {
+  color: white;
+  font-weight: $font-weight--black;
+  font-size: em(80px);
+  z-index: 1;
+  margin: 70px auto;
+  position: relative;
+
+  @include mq(medium) {
+    background: none;
+    margin-top: 0;
+    font-size: em(270px);
+  }
+}
+
+.hero-picture {
+  background: $persianBlue;
+  margin-top: -130px;
+
+  @include mq(medium) {
+    position: static;
+    margin-top: -134px;
+    background: none;
+  }
+}
+
+.bluebox {
+  height: 100px;
+  width: 100%;
+  background: $persianBlue;
+  margin-top: 60px;
+
+  @include mq(medium) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+    width: 50%;
+    height: 100vh;
+  }
+}
+
+.boxesup {
+  position: relative;
+  height: 75px;
+  left: calc(50% + 40px);
+  opacity: 0;
+  animation: slide-in-top-mobile 1s forwards ease-in-out;
+  animation-delay: 1.5s;
+
+  @include mq(medium) {
+    height: 200px;
+    left: calc(50% + 100px);
+    animation: slide-in-top-desktop 1s forwards ease-in-out;
+    animation-delay: 1.5s;
+  }
+}
+
+.hello p {
+  position: absolute;
+  margin: 0;
+  text-align: center;
+  animation: slide-in-mobile 2s forwards ease-in-out;
+
+  @include mq(medium) {
+    animation: slide-in-desktop 2s forwards ease-in-out;
+  }
+}
+
+.hello p:first-of-type {
+  top: -30px;
+
+  @include mq(medium) {
+    top: 150px;
+  }
+}
+
+.hello p:nth-of-type(2) {
+  top: 45px;
+  animation-delay: .1s;
+
+  @include mq(medium) {
+    top: 360px;
+  }
+}
+
+.hero-page {
+  background-image: url("../assets/headerimage.jpg");
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+
+  @include mq(medium) {
+    background-size: cover;
+  }
+}
+
+#down-arrow {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  padding: 10px;
+  bottom: 30px;
+  left: calc(50% - 15px);
+
+  svg {
+    overflow: visible;
+  }
+  @include mq(medium) {
+    left: calc(50% - 25px);
+    bottom: 60px;
+  }
+}
+
+.bottom-nav {
+  @include mq(medium) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.top-arrow,
+.bottom-arrow {
+  animation: bounce 2s infinite;
+}
+
+.top-arrow {
+  animation-delay: .1s;
+}
+
+.home {
+  overflow: hidden;
+}

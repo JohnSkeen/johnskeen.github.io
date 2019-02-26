@@ -1,0 +1,59 @@
+
+[
+    {
+        "title": "Web Dashboard",
+        "challenge": "This project was all about taking a mock up and bringing it to life - especially functionally.  With integration of Charts.JS and several new skills used to create a responsive page while bringing several different widgets to life.",
+        "skill1": "<strong>Chart.JS -</strong> Created and implemented dynamic charts using Chart.JS.",
+        "skill2": "<strong>JavaScript -</strong> Notification panel, alert box, autocomplete messaging box.",
+        "skill3": "<strong>Local Storage -</strong> Saves timezone and preferences locally.",
+        "skill4": "<strong>SASS -</strong> All CSS compiled with SASS.</p>",
+        "fullImage": "assets/dashboardmodaldesktop.jpg",
+        "githubLink": "https://github.com/ColinStellDev96/fewd_project5_styleguide",
+        "liveLink": "https://colinstelldev96.github.io/fewd_project5_styleguide/"
+    },
+    {
+        "title": "Web Dashboard",
+        "challenge": "This project was all about taking a mock up and bringing it to life - especially functionally.  With integration of Charts.JS and several new skills used to create a responsive page while bringing several different widgets to life.",
+        "skill1": "<strong>Chart.JS -</strong> Created and implemented dynamic charts using Chart.JS.",
+        "skill2": "<strong>JavaScript -</strong> Notification panel, alert box, autocomplete messaging box.",
+        "skill3": "<strong>Local Storage -</strong> Saves timezone and preferences locally.",
+        "skill4": "<strong>SASS -</strong> All CSS compiled with SASS.</p>",
+        "fullImage": "assets/dashboardmodaldesktop.jpg",
+        "githubLink": "https://github.com/ColinStellDev96/fewd_project5_styleguide",
+        "liveLink": "https://colinstelldev96.github.io/fewd_project5_styleguide/"
+    },
+    {
+        "title": "Web Dashboard",
+        "challenge": "This project was all about taking a mock up and bringing it to life - especially functionally.  With integration of Charts.JS and several new skills used to create a responsive page while bringing several different widgets to life.",
+        "skill1": "<strong>Chart.JS -</strong> Created and implemented dynamic charts using Chart.JS.",
+        "skill2": "<strong>JavaScript -</strong> Notification panel, alert box, autocomplete messaging box.",
+        "skill3": "<strong>Local Storage -</strong> Saves timezone and preferences locally.",
+        "skill4": "<strong>SASS -</strong> All CSS compiled with SASS.</p>",
+        "fullImage": "assets/dashboardmodaldesktop.jpg",
+        "githubLink": "https://github.com/ColinStellDev96/fewd_project5_styleguide",
+        "liveLink": "https://colinstelldev96.github.io/fewd_project5_styleguide/"
+    },
+    {
+        "title": "Web Dashboard",
+        "challenge": "This project was all about taking a mock up and bringing it to life - especially functionally.  With integration of Charts.JS and several new skills used to create a responsive page while bringing several different widgets to life.",
+        "skill1": "<strong>Chart.JS -</strong> Created and implemented dynamic charts using Chart.JS.",
+        "skill2": "<strong>JavaScript -</strong> Notification panel, alert box, autocomplete messaging box.",
+        "skill3": "<strong>Local Storage -</strong> Saves timezone and preferences locally.",
+        "skill4": "<strong>SASS -</strong> All CSS compiled with SASS.</p>",
+        "fullImage": "assets/dashboardmodaldesktop.jpg",
+        "githubLink": "https://github.com/ColinStellDev96/fewd_project5_styleguide",
+        "liveLink": "https://colinstelldev96.github.io/fewd_project5_styleguide/"
+    },
+    {
+        "title": "Web Dashboard",
+        "challenge": "This project was all about taking a mock up and bringing it to life - especially functionally.  With integration of Charts.JS and several new skills used to create a responsive page while bringing several different widgets to life.",
+        "skill1": "<strong>Chart.JS -</strong> Created and implemented dynamic charts using Chart.JS.",
+        "skill2": "<strong>JavaScript -</strong> Notification panel, alert box, autocomplete messaging box.",
+        "skill3": "<strong>Local Storage -</strong> Saves timezone and preferences locally.",
+        "skill4": "<strong>SASS -</strong> All CSS compiled with SASS.</p>",
+        "fullImage": "assets/dashboardmodaldesktop.jpg",
+        "githubLink": "https://github.com/ColinStellDev96/fewd_project5_styleguide",
+        "liveLink": "https://colinstelldev96.github.io/fewd_project5_styleguide/"
+    },
+
+]

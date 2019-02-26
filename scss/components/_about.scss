@@ -1,0 +1,72 @@
+/*===========================================
+  About Styles
+===========================================*/
+
+#below-fold {
+  background: $persianBlue;
+  padding-top: 110px;
+  position: relative;
+}
+
+.portrait-frame {
+
+}
+
+.greenrectangle {
+  height: 300px;
+  position: absolute;
+  top: 150px;
+  right: 22%;
+
+  @include mq(medium) {
+    position: absolute;
+    height: 500px;
+    top: 0;
+    left: calc(50% - 225px);
+  }
+}
+
+.johnportrait {
+  height: 300px;
+  position: absolute;
+  top: 180px;
+  left: 22%;
+
+  @include mq(medium) {
+    position: absolute;
+    height: 500px;
+    top: 50px;
+    right: 50%;
+  }
+}
+
+.boxes-down {
+  position: absolute;
+  height: 120px;
+  z-index: 2;
+  top: 430px;
+  left: 35%;
+
+  @include mq(medium) {
+
+  }
+}
+
+.about-text {
+  padding-top: 430px;
+  padding-bottom: 20px;
+  width: 80%;
+  margin: 0 auto;
+  color: $white;
+  overflow: auto;
+  line-height: 1.5;
+}
+
+.about-text h1 {
+  font-size: em(60px);
+}
+
+.about-text h3 {
+  color: $malachite;
+  text-transform: uppercase;
+}
