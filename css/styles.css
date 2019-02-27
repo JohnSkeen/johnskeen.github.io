@@ -948,8 +948,12 @@ footer {
   width: 70%; }
 
 .tickets-svg {
-  width: 450px;
-  height: 350px; }
+  width: 90%;
+  height: 90%; }
+  @media (min-width: 769px) {
+    .tickets-svg {
+      width: 450px;
+      height: 350px; } }
 
 .item-4 {
   background-image: url("../assets/directory.jpg");

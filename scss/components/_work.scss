@@ -53,8 +53,13 @@
 }
 
 .tickets-svg {
-  width: 450px;
-  height: 350px;
+  width: 90%;
+  height: 90%;
+
+  @include mq(medium) {
+    width: 450px;
+    height: 350px;
+  }
 }
 
 .item-4 {
