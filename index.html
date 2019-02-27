@@ -8,7 +8,7 @@
   <title>John Skeen</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
-  <link rel="shortcut icon" href="images/blacklogo.ico">
+  <link rel="shortcut icon" href="assets/blacklogo.ico">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -54,10 +54,6 @@
 
   		<symbol id="git" viewBox="0 0 256 256">
   			<g data-name="Layer 1"><path d="M198.91 165.35c-12.08 24.41-45.29 23.84-69.06 23.84-24.16 0-59.34.86-71.9-23.84-4.65-9.24-6.44-20.11-6.44-30.28a54.84 54.84 0 0 1 13.23-36.2 49.79 49.79 0 0 1-2.45-15.55c0-6.85 1.56-10.3 4.65-16.51 14.44 0 23.68 2.87 34.67 11.47a122 122 0 0 1 28.27-3.18A109.82 109.82 0 0 1 155.5 78c10.84-8.51 20.08-11.22 34.36-11.22 3.12 6.21 4.65 9.66 4.65 16.51a49.32 49.32 0 0 1-2.45 15.36c8.76 10.32 12.43 23 12.43 36.39 0 10.2-1.02 20.96-5.58 30.31zm-38.34-40.51c-6 0-11.79 1.09-17.85 1.91a92.7 92.7 0 0 1-14.37 1 93.32 93.32 0 0 1-14.37-1c-6-.82-11.79-1.91-17.85-1.91-14.91 0-23.42 12.34-23.42 26.33 0 28 25.62 32.28 47.93 32.28H136c22.4 0 48-4.27 48-32.28 0-13.99-8.52-26.33-23.43-26.33zm-61.44 43.89c-8.23 0-11.7-10.9-11.7-17.56s3.47-17.56 11.7-17.56 11.69 10.9 11.69 17.56-3.47 17.56-11.69 17.56zm70.24-17.56c0 6.66-3.48 17.56-11.7 17.56S146 157.83 146 151.17s3.48-17.56 11.7-17.56 11.67 10.9 11.67 17.56z" fill="#fff"></path><circle cx="128" cy="128" r="123" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="10"></circle></g>
-  		</symbol>
-
-  		<symbol id="greenrectangle" viewBox="">
-  			<path data-name="Green Rectangle copy" d="M12.5 12.5h387.63v498.12H12.5V12.5z" fill="none" stroke="#1ff74e" stroke-width="25" fill-rule="evenodd"></path>
   		</symbol>
 
   		<symbol id="leftarrow" viewBox="0 0 145.64 257">
@@ -194,49 +190,12 @@
       </div>
     </section>
     <section id="portfolio" class="container">
-      <ul class="grid-container">
-        <li class="item-1 project"><img src='assets/dashboard.png' class='dashboard-image' alt='A picture of a computer monitor featuring the web dashboard app'></li>
-        <li class="item-2 project"><svg class='circles'><use xlink:href='#circles'></use></svg></li>
-        <li class="item-3 project"><svg class='tickets-svg'><use xlink:href='#tickets-svg'></use></svg></li>
-        <li class="item-4 project"></li>
-        <li class="item-5 project"></li>
-      </ul>
     </section>
     <section>
       <div id="modal">
         <div class="modal-layout">
           <div id="modalFrame">
-            <div class="modal-inner">
-              <span id="close"><svg id="close-button"><use xlink:href='#closebutton'></use></svg></span> <!-- close -->
-              <span id="scroll-left"><svg id="left-arrow"><use xlink:href="#leftarrow"></use></svg></span> <!-- scroll-left -->
-              <span id="scroll-right"><svg id="right-arrow"><use xlink:href="#rightarrow"></use></svg></span> <!-- scroll-right -->
-              <div class="modal-image">
-                <img src="assets/dashboardmodaldesktop.jpg" alt="">
-              </div> <!-- modal image -->
-              <div class="modal-info">
-                <div class="info-text">
-                  <h2>Web Dashboard</h2>
-                  <p><strong>The Challenge</strong></p>
-                  <p>This project was all about taking a mock up and bringing it to life - especially functionally.  With integration of Charts.JS and several new skills used to create a responsive page while bringing several different widgets to life.</p>
-                  <p><strong>Skills Used</strong></p>
-                  <p><strong>Chart.JS -</strong> Created and implemented dynamic charts using Chart.JS.</p>
-                  <p><strong>JavaScript -</strong> Notification panel, alert box, autocomplete messaging box</p>
-                  <p><strong>Local Storage -</strong> Saves timezone and preferences locally.</p>
-                  <p><strong>SASS -</strong> All CSS compiled with SASS.</p>
-                </div>
-              </div> <!-- modal-info -->
-              <button class="demo-button"><a href="">
-                <div class="modal-button">
-                  <svg class="demosvg"><use xlink:href="#demosvg"></use></svg>
-                  <p>View Demo</p>
-                </div> <!-- modal-button -->
-              </a></button>
-              <button class="code-button"><a href="">
-                <div class="modal-button">
-                  <svg class="codesvg"><use xlink:href="#codesvg"></use></svg>
-                  <p>See Github</p>
-                </div> <!-- modal-button -->
-              </a></button>
+            <div id="modalInner">
             </div> <!-- modal-inner-->
           </div> <!-- modal-layout -->
         </div> <!-- modalFrame -->

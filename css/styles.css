@@ -393,7 +393,7 @@ base {
 .modal-layout {
   width: 100%; }
 
-.modal-inner {
+#modalInner {
   width: 90%;
   position: relative;
   margin: 0 auto;
@@ -401,15 +401,15 @@ base {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, 1fr); }
   @media (min-width: 769px) {
-    .modal-inner {
+    #modalInner {
       margin-top: 0;
       grid-template-columns: 1fr 1fr 1.25fr 1.25fr;
       grid-template-rows: repeat(6, 1fr); } }
   @media (min-width: 1024px) {
-    .modal-inner {
+    #modalInner {
       width: 80%; } }
   @media (min-width: 1400px) {
-    .modal-inner {
+    #modalInner {
       width: 60%;
       margin: 0 auto; } }
 
@@ -492,26 +492,26 @@ base {
   padding-right: 10px; }
 
 #close,
-#scroll-left,
-#scroll-right {
+#scrollLeft,
+#scrollRight {
   position: absolute; }
 
 #close {
   right: 0;
   top: -35px; }
 
-#scroll-left {
+#scrollLeft {
   left: -30px;
   top: 50%; }
   @media (min-width: 769px) {
-    #scroll-left {
+    #scrollLeft {
       left: -50px; } }
 
-#scroll-right {
+#scrollRight {
   right: -30px;
   top: 50%; }
   @media (min-width: 769px) {
-    #scroll-right {
+    #scrollRight {
       right: -50px; } }
 
 #left-arrow,

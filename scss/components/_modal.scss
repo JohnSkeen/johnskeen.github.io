@@ -30,7 +30,7 @@
   }
 }
 
-.modal-inner {
+#modalInner {
   width: 90%;
   position: relative;
   margin: 0 auto;
@@ -142,8 +142,8 @@
 }
 
 #close,
-#scroll-left,
-#scroll-right {
+#scrollLeft,
+#scrollRight {
   position: absolute;
 }
 
@@ -158,7 +158,7 @@
   }
 }
 
-#scroll-left {
+#scrollLeft {
   left: -30px;
   top: 50%;
 
@@ -170,7 +170,7 @@
   }
 }
 
-#scroll-right {
+#scrollRight {
   right: -30px;
   top: 50%;
 
