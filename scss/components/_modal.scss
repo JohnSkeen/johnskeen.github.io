@@ -40,7 +40,7 @@
 
   @include mq(medium) {
     margin-top: 0;
-    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr 1.25fr 1.25fr;
     grid-template-rows: repeat(6, 1fr);
   }
 
@@ -137,6 +137,7 @@
 .demosvg,
 .codesvg {
   height: 30px;
+  width: 30px;
   padding-right: 10px;
 }
 
