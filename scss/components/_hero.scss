@@ -19,16 +19,15 @@
 
 .hello {
   color: white;
-  font-weight: $font-weight--black;
-  font-size: em(80px);
   z-index: 1;
   margin: 70px auto;
   position: relative;
 
+
   @include mq(medium) {
     background: none;
     margin-top: 0;
-    font-size: em(270px);
+
   }
 }
 
@@ -44,7 +43,7 @@
 }
 
 .bluebox {
-  height: 100px;
+  height: 115px;
   width: 100%;
   background: $persianBlue;
   margin-top: 60px;
@@ -75,27 +74,30 @@
   }
 }
 
-.hello p {
+.hello h1 {
   position: absolute;
   margin: 0;
   text-align: center;
+  font-weight: $font-weight--black;
+  font-size: em(80px);
   animation: slide-in-mobile 2s forwards ease-in-out;
 
   @include mq(medium) {
+    font-size: em(270px);
     animation: slide-in-desktop 2s forwards ease-in-out;
   }
 }
 
-.hello p:first-of-type {
-  top: -30px;
+.hello h1:first-of-type {
+  top: -35px;
 
   @include mq(medium) {
     top: 150px;
   }
 }
 
-.hello p:nth-of-type(2) {
-  top: 45px;
+.hello h1:nth-of-type(2) {
+  top: 33px;
   animation-delay: .1s;
 
   @include mq(medium) {
