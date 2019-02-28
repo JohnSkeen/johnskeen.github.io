@@ -87,9 +87,6 @@ fetchData(projectInfoApi)
 	  let currentProject = projectData[index];
 
 	  modalInner.innerHTML = `
-		<span id="close"><svg id="close-button"><use xlink:href='#closebutton'></use></svg></span>
-		<span id="scrollLeft"><svg id="left-arrow"><use xlink:href="#leftarrow"></use></svg></span>
-		<span id="scrollRight"><svg id="right-arrow"><use xlink:href="#rightarrow"></use></svg></span>
 		<div class="modal-image">
 			<img src="${currentProject.fullImage}" alt="">
 		</div> <!-- modal image -->

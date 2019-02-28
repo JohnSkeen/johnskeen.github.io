@@ -7,7 +7,7 @@
       "skill3": "<strong>Local Storage -</strong> Saves timezone and preferences locally.",
       "skill4": "<strong>SASS -</strong> All CSS compiled with SASS.",
       "fullImage": "assets/dashboardmodaldesktop.jpg",
-      "thumbnail": "<img src=\"assets/dashboard.png\" class=\"dashboard-image\" alt=\"A picture of a computer monitor featuring the web dashboard app\">",      
+      "thumbnail": "<img src=\"assets/dashboard.png\" class=\"dashboard-image\" alt=\"A picture of a computer monitor featuring the web dashboard app\">",
       "class": "item-1",
       "githubLink": "https://github.com/JohnSkeen/Web-Dashboard",
       "liveLink": "https://johnskeen.github.io/Web-Dashboard/"
@@ -17,7 +17,7 @@
       "challenge": "This project was an introduction to an important skillset, SASS.  The challenge was to take a given comp and recreate using many different SASS tools.",
       "skill1": "<strong>SASS -</strong> An introduction to the use of SASS CSS Precomiler.",
       "skill2": "<strong>SASS -</strong> Strong utilization of functions, mixins, placeholders, and variables.",
-      "skill3": "<strong>CSS -</strong> Strong CSS skills used including introduction to BEM style naming convention.",
+      "skill3": "<strong>CSS -</strong> Strong CSS skills used, including introduction to BEM style naming convention.",
       "skill4": "<strong>Grid -</strong> An introduction and use of CSS Grid to format style sheet.",
       "fullImage": "assets/circlesmodaldesktop.jpg",
       "thumbnail": "<svg class=\"circles\"><use xlink:href=\"#circles\"></use></svg>",
@@ -27,7 +27,7 @@
   },
   {
       "title": "Nichiha Landing Page",
-      "challenge": "Nichiha needed a landing page matching a comp provided by their Sr. Graphic Designer that was responsive, fluid, and integrated with Salesforce's Pardot.",
+      "challenge": "Nichiha needed a landing page matching a comp provided by their Senior Graphic Designer that was responsive, fluid, and integrated with Salesforce's Pardot.",
       "skill1": "<strong>Pardot -</strong> Integration with Salesforce's Pardot to capture leads for Nichiha's event.",
       "skill2": "<strong>JavaScript -</strong> Created a modal for rules and enabled smooth scrolling effects.",
       "skill3": "<strong>Responsive Design -</strong> Ensured that all elements were responsive to any screen size.",

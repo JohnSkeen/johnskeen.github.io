@@ -388,14 +388,14 @@ base {
 
 #modalFrame {
   margin: 50px auto;
-  width: 85%; }
+  width: 85%;
+  position: relative; }
 
 .modal-layout {
   width: 100%; }
 
 #modalInner {
   width: 90%;
-  position: relative;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -438,9 +438,12 @@ base {
       grid-area: 1 / 3 / 6 / 5; } }
   .modal-info h2 {
     font-size: 1.75em; }
-    @media (min-width: 769px) {
+    @media (min-width: 1024px) {
       .modal-info h2 {
-        font-size: 3.125em; } }
+        font-size: 2.5em; } }
+    @media (min-width: 1400px) {
+      .modal-info h2 {
+        font-size: 3em; } }
   .modal-info p {
     line-height: 1.5; }
 
@@ -497,8 +500,11 @@ base {
   position: absolute; }
 
 #close {
-  right: 0;
-  top: -35px; }
+  right: -5.5%;
+  top: -5.5%; }
+  @media (min-width: 1400px) {
+    #close {
+      right: -6.5%; } }
 
 #scrollLeft {
   left: -30px;
@@ -506,6 +512,9 @@ base {
   @media (min-width: 769px) {
     #scrollLeft {
       left: -50px; } }
+  @media (min-width: 1400px) {
+    #scrollLeft {
+      left: 10%; } }
 
 #scrollRight {
   right: -30px;
@@ -513,6 +522,9 @@ base {
   @media (min-width: 769px) {
     #scrollRight {
       right: -50px; } }
+  @media (min-width: 1400px) {
+    #scrollRight {
+      right: 10%; } }
 
 #left-arrow,
 #right-arrow,
