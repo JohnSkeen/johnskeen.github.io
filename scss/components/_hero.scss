@@ -11,9 +11,9 @@
   background: $black;
   height: 100vh;
   margin-top: 120px;
+  position: relative;
   @include mq(medium) {
     margin-top: 0;
-    position: relative;
   }
 }
 
@@ -21,7 +21,6 @@
   color: white;
   z-index: 1;
   margin: 70px auto;
-  position: relative;
 
 
   @include mq(medium) {
@@ -37,16 +36,16 @@
 
   @include mq(medium) {
     position: static;
-    margin-top: -134px;
+    margin-top: -205px;
     background: none;
   }
 }
 
 .bluebox {
-  height: 115px;
+  height: 300px;
   width: 100%;
   background: $persianBlue;
-  margin-top: 60px;
+  margin-top: 0px;
 
   @include mq(medium) {
     position: absolute;
@@ -59,18 +58,18 @@
 }
 
 .boxesup {
-  position: relative;
+  position: absolute;
   height: 75px;
   left: calc(50% + 40px);
   opacity: 0;
-  animation: slide-in-top-mobile 1s forwards ease-in-out;
-  animation-delay: 1.5s;
+  animation: slide-in-out-top-mobile 3s forwards ease-in-out;
+  animation-delay: .5s;
 
   @include mq(medium) {
     height: 200px;
     left: calc(50% + 100px);
-    animation: slide-in-top-desktop 1s forwards ease-in-out;
-    animation-delay: 1.5s;
+    animation: slide-in-out-top-desktop 3s forwards ease-in-out;
+    animation-delay: .5s;
   }
 }
 
@@ -80,16 +79,16 @@
   text-align: center;
   font-weight: $font-weight--black;
   font-size: em(80px);
-  animation: slide-in-mobile 2s forwards ease-in-out;
+  animation: slide-in-out-mobile 4s forwards ease-in-out;
 
   @include mq(medium) {
     font-size: em(270px);
-    animation: slide-in-desktop 2s forwards ease-in-out;
+    animation: slide-in-out-desktop 4s forwards ease-in-out;
   }
 }
 
 .hello h1:first-of-type {
-  top: -35px;
+  top: 185px;
 
   @include mq(medium) {
     top: 150px;
@@ -97,11 +96,39 @@
 }
 
 .hello h1:nth-of-type(2) {
-  top: 33px;
+  top: 255px;
   animation-delay: .1s;
 
   @include mq(medium) {
     top: 360px;
+  }
+}
+
+.introduction h1 {
+  position: absolute;
+  opacity: 0;
+  margin: 0;
+  text-align: center;
+  color: $white;
+  font-family: $font-stack-primary;
+  font-weight: $font-weight--black;
+  font-size: em(80px);
+  animation: slide-in-mobile 2s forwards ease-in-out;
+  animation-delay: 4s;
+  top: 220px;
+
+  @include mq(medium) {
+    font-size: em(138px);
+    animation: slide-in-tablet 2s forwards ease-in-out;
+    animation-delay: 4s;
+    top: 260px;
+  }
+
+  @include mq(large) {
+    font-size: em(190px);
+    animation: slide-in-desktop 2s forwards ease-in-out;
+    animation-delay: 4s;
+    top: 260px;
   }
 }
 
@@ -152,6 +179,117 @@
   animation-delay: .1s;
 }
 
-.home {
-  // overflow: hidden;
+.rotating-words {
+  display: inline;
+  text-align: center;
+  letter-spacing: .003em;
+  margin: 0 auto;
+}
+
+.rotating-words span {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  font-size: em(20px);
+  font-weight: $font-weight--medium;
+  text-transform: uppercase;
+  top: 450px;
+  left: calc(50% - 180px);
+  width: 100%;
+  height: 100%;
+  color: white;
+  @include mq(medium) {
+    font-size: em(32px);
+    left: calc(50% - 385px);
+  }
+
+  @include mq(large) {
+    font-size: em(38px);
+    left: calc(50% - 462px);
+  }
+
+  @include mq(xlarge) {
+    font-size: em(48px);
+    left: calc(50% - 500px);
+  }
+}
+
+.rotating-words span:not(:last-child){
+	animation: rotateWordsFirst .7s linear 0s;
+  animation-delay: 6s;
+}
+
+.rotating-words span:last-child{
+	animation: rotateWordsLast 1s forwards 0s;
+}
+
+.rotating-words span:nth-child(1) {
+  animation-delay: 6s;
+}
+
+.rotating-words span:nth-child(2) {
+	animation-delay: 7.5s;
+  @include mq(medium) {
+    color: white;
+  }
+}
+.rotating-words span:nth-child(3) {
+	animation-delay: 8.8s;
+  @include mq(medium) {
+    color: white;
+  }
+}
+.rotating-words span:nth-child(4) {
+	animation-delay: 9.8s;
+  @include mq(medium) {
+    color: white;
+  }
+}
+.rotating-words span:nth-child(5) {
+	animation-delay: 10.6s;
+  @include mq(medium) {
+    color: white;
+  }
+}
+.rotating-words span:nth-child(6) {
+	animation-delay: 11.4s;
+  @include mq(medium) {
+    color: white;
+  }
+}
+.rotating-words span:nth-child(7) {
+	animation-delay: 12.2s;
+  @include mq(medium) {
+    color: white;
+  }
+}
+.rotating-words span:nth-child(8) {
+	animation-delay: 13s;
+  @include mq(medium) {
+    color: white;
+  }
+}
+.rotating-words span:nth-child(9) {
+	animation-delay: 13.9s;
+  @include mq(medium) {
+    color: white;
+  }
+}
+.rotating-words span:nth-child(10) {
+	animation-delay: 14.9s;
+  @include mq(medium) {
+    color: white;
+  }
+}
+.rotating-words span:nth-child(11) {
+	animation-delay: 16.1s;
+  @include mq(medium) {
+    color: white;
+  }
+}
+.rotating-words span:nth-child(12) {
+	animation-delay: 17.5s;
+  @include mq(medium) {
+    color: white;
+  }
 }

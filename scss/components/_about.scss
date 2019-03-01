@@ -5,38 +5,49 @@
 #below-fold {
   background: $persianBlue;
   padding-top: 110px;
-  position: relative;
+
+  @include mq(medium) {
+    padding-top: 80px;
+  }
 }
 
 .portrait-frame {
+  width: 280px;
+  margin: 0 auto;
+  padding-left: 25px;
+  position: relative;
 
+  @include mq(medium) {
+    width: 40%;
+    padding: 80px 80px;
+  }
+}
+
+.about-container {
+  @include mq(medium) {
+    @include flexyrow;
+    padding-bottom: 80px;
+  }
 }
 
 .greenrectangle {
-  height: 300px;
+  height: 351px;
   position: absolute;
-  top: 150px;
-  right: 22%;
+  z-index: 1;
+  top: -27px;
+  left: 6px;
 
   @include mq(medium) {
-    position: absolute;
-    height: 500px;
-    top: 0;
-    left: calc(50% - 225px);
+    height: 315px;
   }
 }
 
 .johnportrait {
-  height: 300px;
-  position: absolute;
-  top: 180px;
-  left: 22%;
+  width: 100%;
+  z-index: 2;
+  position: relative;
 
   @include mq(medium) {
-    position: absolute;
-    height: 500px;
-    top: 50px;
-    right: 50%;
   }
 }
 
@@ -44,8 +55,8 @@
   position: absolute;
   height: 120px;
   z-index: 2;
-  top: 430px;
-  left: 35%;
+  bottom: -60px;
+  left: 50%;
 
   @include mq(medium) {
 
@@ -53,13 +64,18 @@
 }
 
 .about-text {
-  padding-top: 430px;
+  padding-top: 30px;
   padding-bottom: 20px;
   width: 80%;
   margin: 0 auto;
   color: $white;
   overflow: auto;
   line-height: 1.5;
+
+  @include mq(medium) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 .about-text h1 {

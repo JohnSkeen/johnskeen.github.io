@@ -12,7 +12,7 @@
 .mobile-header {
   @include mq(medium) {
     @include flexyrow;
-    background: transparent;
+    background: none;
   }
 }
 
@@ -82,7 +82,7 @@
   right: 30px;
   height: 28px;
   width: 36px;
-  z-index: 5;
+  z-index: 7;
 
   @include mq(medium) {
     display: none;
@@ -174,10 +174,20 @@ input ~ nav {
         font-size: em(24px);
         display: block;
         padding: 30px;
+        transition: .5s;
 
         @include mq(medium) {
           font-size: 12px;
-          padding: 22.5px;
+          margin: 20px;
+          padding: 5px 0;
+          border-bottom: 2px solid rgba(0,0,0,.0);
+          &:hover {
+            border-color: $malachite;
+          }
+        }
+
+        @include mq(large) {
+          margin: 30px;
         }
       }
     }
