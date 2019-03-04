@@ -639,9 +639,6 @@ base {
   width: 30px; }
 
 /*===========================================
-  Header Styles
-===========================================*/
-/*===========================================
   Typography Styles
 ===========================================*/
 body {
@@ -1182,7 +1179,8 @@ footer {
   padding: 0;
   margin: 0 auto;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 1fr); }
+  grid-template-rows: repeat(5, 1fr);
+  cursor: pointer; }
   @media (min-width: 769px) {
     .grid-container {
       margin-top: 0;
