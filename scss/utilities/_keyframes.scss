@@ -109,22 +109,6 @@
 
 }
 
-@keyframes slide-in-mobile {
-  0% {
-    left: 0;
-    opacity: 0;
-  }
-  60% {
-    left: calc(50% - 174px);
-    opacity: 1;
-  }
-  100% {
-    left: calc(50% - 184px);
-    opacity: 1;
-  }
-
-}
-
 @keyframes slide-in-out-desktop {
   0% {
     left: 0;
@@ -152,37 +136,35 @@
   }
 }
 
-@keyframes slide-in-tablet {
+@keyframes slide-down-mobile {
   0% {
-    left: 0;
+    top: 120px;
     opacity: 0;
   }
-
-  1% {
-    opacity: 1;
-  }
-
-  60% {
-    left: calc(50% - 315px);
-    opacity: 1;
-  }
   100% {
-    left: calc(50% - 355px);
+    top: 160px;
     opacity: 1;
   }
 }
 
-@keyframes slide-in-desktop {
+@keyframes slide-down-tablet {
   0% {
-    left: 0;
+    top: 220px;
     opacity: 0;
   }
-  60% {
-    left: calc(50% - 429px);
+  100% {
+    top: 250px;
     opacity: 1;
   }
+}
+
+@keyframes slide-down-desktop {
+  0% {
+    top: 220px;
+    opacity: 0;
+  }
   100% {
-    left: calc(50% - 469px);
+    top: 260px;
     opacity: 1;
   }
 }
@@ -198,6 +180,18 @@
     0% { opacity: 0;}
     100% { opacity: 1;}
 }
+
+@keyframes dropIn {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1
+  }
+}
+
 
 @keyframes blowUpContent {
   0% {

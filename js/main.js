@@ -1,5 +1,5 @@
 
-// Lock Top Screen Until Button is Clicked and then smooth scroll to proper area
+// Smooth scroll to appropriate section
 
 $("a[href^='#']").click(function(e) {
 	e.preventDefault();
@@ -143,3 +143,14 @@ fetchData(projectInfoApi)
 			viewModal(currentIndex);
 		});
 	}));
+
+// Contact modal
+
+$('#hollaButton').click(function(){
+	$('#contact-modal').show();
+});
+
+// Close contact modal
+$('#contact-close').click(function(){
+	$('#contact-modal').hide();
+});

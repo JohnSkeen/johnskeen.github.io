@@ -73,16 +73,6 @@
   100% {
     left: 0;
     opacity: 0; } }
-@keyframes slide-in-mobile {
-  0% {
-    left: 0;
-    opacity: 0; }
-  60% {
-    left: calc(50% - 174px);
-    opacity: 1; }
-  100% {
-    left: calc(50% - 184px);
-    opacity: 1; } }
 @keyframes slide-in-out-desktop {
   0% {
     left: 0;
@@ -102,27 +92,26 @@
   100% {
     left: 0;
     opacity: 0; } }
-@keyframes slide-in-tablet {
+@keyframes slide-down-mobile {
   0% {
-    left: 0;
+    top: 120px;
     opacity: 0; }
-  1% {
-    opacity: 1; }
-  60% {
-    left: calc(50% - 315px);
-    opacity: 1; }
   100% {
-    left: calc(50% - 355px);
+    top: 160px;
     opacity: 1; } }
-@keyframes slide-in-desktop {
+@keyframes slide-down-tablet {
   0% {
-    left: 0;
+    top: 220px;
     opacity: 0; }
-  60% {
-    left: calc(50% - 429px);
-    opacity: 1; }
   100% {
-    left: calc(50% - 469px);
+    top: 250px;
+    opacity: 1; } }
+@keyframes slide-down-desktop {
+  0% {
+    top: 220px;
+    opacity: 0; }
+  100% {
+    top: 260px;
     opacity: 1; } }
 @keyframes rotateWordsFirst {
   0% {
@@ -138,6 +127,13 @@
   0% {
     opacity: 0; }
   100% {
+    opacity: 1; } }
+@keyframes dropIn {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0%);
     opacity: 1; } }
 @keyframes blowUpContent {
   0% {
@@ -496,7 +492,9 @@ base {
 #modalFrame {
   margin: 50px auto;
   width: 85%;
-  position: relative; }
+  position: relative;
+  transform: translateY(-20%);
+  animation: dropIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; }
 
 .modal-layout {
   width: 100%; }
@@ -646,7 +644,7 @@ base {
 /*===========================================
   Typography Styles
 ===========================================*/
-* {
+body {
   font-family: "Montserrat", sans-serif; }
 
 /*===========================================
@@ -853,7 +851,7 @@ input:checked ~ nav {
       background: none; } }
 
 .bluebox {
-  height: 300px;
+  height: 232px;
   width: 100%;
   background: #151db7;
   margin-top: 0px; }
@@ -914,21 +912,27 @@ input:checked ~ nav {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 5em;
-  animation: slide-in-mobile 2s forwards ease-in-out;
+  animation: slide-down-mobile 1s forwards ease-in-out;
   animation-delay: 4s;
-  top: 220px; }
+  left: calc(50% - 172px);
+  top: 180px; }
+  @media (min-width: 440px) {
+    .introduction h1 {
+      animation: slide-down-tablet 1s forwards ease-in-out;
+      left: calc(50% - 197px);
+      animation-delay: 4s; } }
   @media (min-width: 769px) {
     .introduction h1 {
       font-size: 8.625em;
-      animation: slide-in-tablet 2s forwards ease-in-out;
+      animation: slide-down-tablet 1s forwards ease-in-out;
       animation-delay: 4s;
-      top: 260px; } }
+      left: calc(50% - 355px); } }
   @media (min-width: 1024px) {
     .introduction h1 {
       font-size: 11.875em;
-      animation: slide-in-desktop 2s forwards ease-in-out;
+      animation: slide-down-desktop 1s forwards ease-in-out;
       animation-delay: 4s;
-      top: 260px; } }
+      left: calc(50% - 469px); } }
 
 .hero-page {
   background-image: url("../assets/headerimage.jpg");
@@ -968,11 +972,16 @@ input:checked ~ nav {
 .top-arrow {
   animation-delay: .1s; }
 
-.rotating-words {
-  display: inline;
+.sentences {
+  position: relative;
   text-align: center;
-  letter-spacing: .003em;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
   margin: 0 auto; }
+
+.rotating-words {
+  letter-spacing: .003em; }
 
 .rotating-words span {
   opacity: 0;
@@ -981,23 +990,22 @@ input:checked ~ nav {
   font-size: 1.25em;
   font-weight: 500;
   text-transform: uppercase;
-  top: 450px;
-  left: calc(50% - 180px);
   width: 100%;
-  height: 100%;
+  height: 120px;
+  top: 120px;
+  left: 0;
   color: white; }
   @media (min-width: 769px) {
     .rotating-words span {
-      font-size: 2em;
-      left: calc(50% - 385px); } }
+      top: 460px;
+      font-size: 2em; } }
   @media (min-width: 1024px) {
     .rotating-words span {
-      font-size: 2.375em;
-      left: calc(50% - 462px); } }
+      font-size: 2.375em; } }
   @media (min-width: 1400px) {
     .rotating-words span {
       font-size: 3em;
-      left: calc(50% - 500px); } }
+      top: 470px; } }
 
 .rotating-words span:not(:last-child) {
   animation: rotateWordsFirst .7s linear 0s;
@@ -1011,76 +1019,43 @@ input:checked ~ nav {
 
 .rotating-words span:nth-child(2) {
   animation-delay: 7.5s; }
-  @media (min-width: 769px) {
-    .rotating-words span:nth-child(2) {
-      color: white; } }
 
 .rotating-words span:nth-child(3) {
   animation-delay: 8.8s; }
-  @media (min-width: 769px) {
-    .rotating-words span:nth-child(3) {
-      color: white; } }
 
 .rotating-words span:nth-child(4) {
   animation-delay: 9.8s; }
-  @media (min-width: 769px) {
-    .rotating-words span:nth-child(4) {
-      color: white; } }
 
 .rotating-words span:nth-child(5) {
   animation-delay: 10.6s; }
-  @media (min-width: 769px) {
-    .rotating-words span:nth-child(5) {
-      color: white; } }
 
 .rotating-words span:nth-child(6) {
   animation-delay: 11.4s; }
-  @media (min-width: 769px) {
-    .rotating-words span:nth-child(6) {
-      color: white; } }
 
 .rotating-words span:nth-child(7) {
   animation-delay: 12.2s; }
-  @media (min-width: 769px) {
-    .rotating-words span:nth-child(7) {
-      color: white; } }
 
 .rotating-words span:nth-child(8) {
   animation-delay: 13s; }
-  @media (min-width: 769px) {
-    .rotating-words span:nth-child(8) {
-      color: white; } }
 
 .rotating-words span:nth-child(9) {
   animation-delay: 13.9s; }
-  @media (min-width: 769px) {
-    .rotating-words span:nth-child(9) {
-      color: white; } }
 
 .rotating-words span:nth-child(10) {
   animation-delay: 14.9s; }
-  @media (min-width: 769px) {
-    .rotating-words span:nth-child(10) {
-      color: white; } }
 
 .rotating-words span:nth-child(11) {
   animation-delay: 16.1s; }
-  @media (min-width: 769px) {
-    .rotating-words span:nth-child(11) {
-      color: white; } }
 
 .rotating-words span:nth-child(12) {
   animation-delay: 17.5s; }
-  @media (min-width: 769px) {
-    .rotating-words span:nth-child(12) {
-      color: white; } }
 
 /*===========================================
   About Styles
 ===========================================*/
 #below-fold {
   background: #151db7;
-  padding-top: 110px; }
+  padding-top: 160px; }
   @media (min-width: 769px) {
     #below-fold {
       padding-top: 80px; } }
@@ -1088,12 +1063,19 @@ input:checked ~ nav {
 .portrait-frame {
   width: 280px;
   margin: 0 auto;
-  padding-left: 25px;
+  padding-left: 22px;
   position: relative; }
   @media (min-width: 769px) {
     .portrait-frame {
-      width: 40%;
-      padding: 80px 80px; } }
+      padding-left: 40px;
+      width: 250px; } }
+  @media (min-width: 1024px) {
+    .portrait-frame {
+      padding-left: 70px;
+      width: 340px; } }
+  @media (min-width: 1400px) {
+    .portrait-frame {
+      width: 440px; } }
 
 @media (min-width: 769px) {
   .about-container {
@@ -1105,14 +1087,23 @@ input:checked ~ nav {
     padding-bottom: 80px; } }
 
 .greenrectangle {
-  height: 351px;
+  width: 280px;
   position: absolute;
   z-index: 1;
-  top: -27px;
-  left: 6px; }
+  top: -26px;
+  left: -4px; }
   @media (min-width: 769px) {
     .greenrectangle {
-      height: 315px; } }
+      width: 250px;
+      left: 14px; } }
+  @media (min-width: 1024px) {
+    .greenrectangle {
+      top: -45px;
+      left: 24px;
+      width: 340px; } }
+  @media (min-width: 1400px) {
+    .greenrectangle {
+      width: 440px; } }
 
 .johnportrait {
   width: 100%;
@@ -1123,8 +1114,16 @@ input:checked ~ nav {
   position: absolute;
   height: 120px;
   z-index: 2;
-  bottom: -60px;
+  bottom: -70px;
   left: 50%; }
+  @media (min-width: 1024px) {
+    .boxes-down {
+      height: 140px;
+      bottom: -80px; } }
+  @media (min-width: 1024px) {
+    .boxes-down {
+      height: 180px;
+      bottom: -105px; } }
 
 .about-text {
   padding-top: 30px;
@@ -1136,8 +1135,13 @@ input:checked ~ nav {
   line-height: 1.5; }
   @media (min-width: 769px) {
     .about-text {
+      width: 55%;
       padding-left: 30px;
       padding-right: 30px; } }
+  @media (min-width: 1400px) {
+    .about-text {
+      width: 40%;
+      margin-right: 330px; } }
 
 .about-text h1 {
   font-size: 3.75em; }
@@ -1165,7 +1169,8 @@ footer {
       width: 300px; } }
 
 .social-svg {
-  height: 40px; }
+  height: 40px;
+  width: 40px; }
 
 /*===========================================
   Work Styles
@@ -1265,5 +1270,99 @@ footer {
 /*===========================================
     Contact Modal Styles
 ===========================================*/
+#contact-modal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); }
+
+#contact-modal-frame {
+  margin: 50px auto;
+  width: 85%;
+  position: relative;
+  transform: translateY(-20%);
+  animation: dropIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; }
+
+.contact-modal-layout {
+  width: 100%; }
+
+#contact-modal-inner {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr; }
+  @media (min-width: 769px) {
+    #contact-modal-inner {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr; } }
+  @media (min-width: 1024px) {
+    #contact-modal-inner {
+      width: 80%; } }
+  @media (min-width: 1400px) {
+    #contact-modal-inner {
+      width: 70%; } }
+
+#contact-close-button {
+  cursor: pointer;
+  height: 30px;
+  width: 30px; }
+
+#contact-close {
+  position: absolute;
+  right: -5.5%;
+  top: -5.5%; }
+  @media (min-width: 1400px) {
+    #contact-close {
+      right: -6.5%; } }
+
+.contact-info {
+  grid-area: 1 / 1 / 2 / 2;
+  color: #fff;
+  width: 100%;
+  background-image: url(../assets/contactbackground.jpg);
+  background-attachment: fixed;
+  background-position: left bottom;
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+  @media (min-width: 769px) {
+    .contact-info {
+      grid-area: 1 / 1 / 2 / 2; } }
+
+.contact-info h3 {
+  font-size: 3.125em;
+  padding: 20px 20px;
+  width: 80%; }
+
+.contact-info p {
+  margin-bottom: auto;
+  line-height: 1.5;
+  letter-spacing: .03em;
+  width: 80%; }
+
+.contact-socials {
+  width: 80%;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.wufoo-form {
+  grid-area: 2 / 1 / 3 / 2;
+  width: 100%;
+  background: #fff; }
+  @media (min-width: 769px) {
+    .wufoo-form {
+      grid-area: 1 / 2 / 2 / 3; } }
 
 /*# sourceMappingURL=styles.css.map */

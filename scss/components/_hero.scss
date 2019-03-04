@@ -42,7 +42,7 @@
 }
 
 .bluebox {
-  height: 300px;
+  height: 232px;
   width: 100%;
   background: $persianBlue;
   margin-top: 0px;
@@ -113,22 +113,30 @@
   font-family: $font-stack-primary;
   font-weight: $font-weight--black;
   font-size: em(80px);
-  animation: slide-in-mobile 2s forwards ease-in-out;
+  animation: slide-down-mobile 1s forwards ease-in-out;
   animation-delay: 4s;
-  top: 220px;
+  left: calc(50% - 172px);
+  top: 180px;
+
+  @include mq(small) {
+    animation: slide-down-tablet 1s forwards ease-in-out;
+    left: calc(50% - 197px);
+    animation-delay: 4s;
+  }
 
   @include mq(medium) {
     font-size: em(138px);
-    animation: slide-in-tablet 2s forwards ease-in-out;
+    animation: slide-down-tablet 1s forwards ease-in-out;
     animation-delay: 4s;
-    top: 260px;
+    left: calc(50% - 355px);
   }
 
   @include mq(large) {
     font-size: em(190px);
-    animation: slide-in-desktop 2s forwards ease-in-out;
+    animation: slide-down-desktop 1s forwards ease-in-out;
     animation-delay: 4s;
-    top: 260px;
+    left: calc(50% - 469px);
+
   }
 }
 
@@ -179,11 +187,17 @@
   animation-delay: .1s;
 }
 
-.rotating-words {
-  display: inline;
+.sentences {
+  position: relative;
   text-align: center;
-  letter-spacing: .003em;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
   margin: 0 auto;
+}
+
+.rotating-words {
+  letter-spacing: .003em;
 }
 
 .rotating-words span {
@@ -193,24 +207,23 @@
   font-size: em(20px);
   font-weight: $font-weight--medium;
   text-transform: uppercase;
-  top: 450px;
-  left: calc(50% - 180px);
   width: 100%;
-  height: 100%;
+  height: 120px;
+  top: 120px;
+  left: 0;
   color: white;
   @include mq(medium) {
+    top: 460px;
     font-size: em(32px);
-    left: calc(50% - 385px);
   }
 
   @include mq(large) {
     font-size: em(38px);
-    left: calc(50% - 462px);
   }
 
   @include mq(xlarge) {
     font-size: em(48px);
-    left: calc(50% - 500px);
+    top: 470px;
   }
 }
 
@@ -229,67 +242,34 @@
 
 .rotating-words span:nth-child(2) {
 	animation-delay: 7.5s;
-  @include mq(medium) {
-    color: white;
-  }
 }
 .rotating-words span:nth-child(3) {
 	animation-delay: 8.8s;
-  @include mq(medium) {
-    color: white;
-  }
 }
 .rotating-words span:nth-child(4) {
 	animation-delay: 9.8s;
-  @include mq(medium) {
-    color: white;
-  }
 }
 .rotating-words span:nth-child(5) {
 	animation-delay: 10.6s;
-  @include mq(medium) {
-    color: white;
-  }
 }
 .rotating-words span:nth-child(6) {
 	animation-delay: 11.4s;
-  @include mq(medium) {
-    color: white;
-  }
 }
 .rotating-words span:nth-child(7) {
 	animation-delay: 12.2s;
-  @include mq(medium) {
-    color: white;
-  }
 }
 .rotating-words span:nth-child(8) {
 	animation-delay: 13s;
-  @include mq(medium) {
-    color: white;
-  }
 }
 .rotating-words span:nth-child(9) {
 	animation-delay: 13.9s;
-  @include mq(medium) {
-    color: white;
-  }
 }
 .rotating-words span:nth-child(10) {
 	animation-delay: 14.9s;
-  @include mq(medium) {
-    color: white;
-  }
 }
 .rotating-words span:nth-child(11) {
 	animation-delay: 16.1s;
-  @include mq(medium) {
-    color: white;
-  }
 }
 .rotating-words span:nth-child(12) {
 	animation-delay: 17.5s;
-  @include mq(medium) {
-    color: white;
-  }
 }
